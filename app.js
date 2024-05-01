@@ -67,7 +67,7 @@ app.get('/', (req, res) => {
   res.render('index', { user: req.user });
 })
 
-app.get('/account', (req, res) => {
+app.get('/account', ensureAuthenticated, (req, res) => {
   res.render('account', { user: req.user });
 });
 
