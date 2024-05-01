@@ -30,7 +30,7 @@ You will also need to register the app on GitHub for OAuth2 Authentication. To d
 
 - **Homepage URL:** http://localhost:3000
 - **Authorization Callback URL:** http://localhost:3000/auth/github/callback
--
+
 With the app registered, you will receive a Client ID. Generate a Client Secret and make sure you copy it to your clipboard. Add both the Client ID and Client Secret variables to a .env file at the root of your directory as follows.
 
 ```.env
