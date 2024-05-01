@@ -6,7 +6,7 @@ const path = require("path");
 require("dotenv").config();
 const express = require('express');
 const partials = require('express-partials');
-
+const session = require('express-session');
 
 const app = express();
 
@@ -32,7 +32,11 @@ const GITHUB_CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET;
 /*
  *  Express Project Setup
 */
-
+app.use(session({
+  secret: 'codecademy',
+  resave: false,
+  saveUninitialized: false
+}))
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(partials());
